@@ -1,0 +1,19 @@
+{
+  "name": "salary",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "salary/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/salary",
+        "main": "salary/src/index.ts",
+        "tsConfig": "salary/tsconfig.lib.json",
+        "assets": ["salary/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
