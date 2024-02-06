@@ -14,8 +14,6 @@ type EmployeeCore = {
   email: Email;
 };
 
-type EmployeePermanence = 'permanent' | 'contract';
-
 type EmployeeSalaryConcern = (
   | {
       permanence: 'permanent';
@@ -26,9 +24,7 @@ type EmployeeSalaryConcern = (
       hourlyRate: number; // TODO NonNegativeInteger
       hoursWorked: number; // TODO NonNegativeInteger
     }
-) & {
-  permanence: EmployeePermanence;
-};
+);
 
 type Employee = EmployeeCore & EmployeeSalaryConcern;
 
